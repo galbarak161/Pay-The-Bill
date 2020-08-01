@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderSummary">
+
+    <ScrollView
+        android:id="@+id/linear_layout_scroller"
+        android:layout_width="377dp"
+        android:layout_height="497dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/Diners_summery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/Order_summery"
+        android:layout_width="375dp"
+        android:layout_height="81dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_scroller"
+        app:layout_constraintVertical_bias="0.0">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Tip_btn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/nextbutton"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="SetTipToOrder"
+        android:text="עדכן טיפ"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/OrdersListShow_btn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/addbutton"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="ShowAllOrders"
+        android:text="רשימת מנות"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

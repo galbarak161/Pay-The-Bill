@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/DishName_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:hint="שם המנה"
+            android:inputType="text"
+            android:nextFocusForward="@+id/DishPrice_txt"
+            android:imeOptions="actionNext"/>
+
+        <EditText
+            android:id="@+id/DishPrice_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:hint="מחיר המנה"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scroll_checkbox"
+        android:layout_width="382dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:isScrollContainer="false"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/Diners_CheckBox_Grid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="false"
+                android:numColumns="3"
+                android:padding="1dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
